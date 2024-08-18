@@ -1,25 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --f-bella: "Bellefair", serif;
+    --f-barlow: "Barlow", sans-serif;
+}
+
+
 nav {
-    top: 50px;
-    position: fixed;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
+    height: 136px;
     justify-content: space-between;
 }
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
     padding-left: 50px;
 }
 
+.logo > svg {
+    transform: translateY(-23px);
+}
+
 .divider {
-    width: 400px;
+    border: 0;
+    border-top: 1px solid rgb(151,151,151);
+    width: 660px;
+    transform: translateX(80px);
+    z-index: 1;
 }
 
 .links {
-    width: 55%;
-    height: 100px;
+    width: 736px;
+    height: 96px;
+    background-color: rgba(255, 255, 255, 5%);
+    backdrop-filter: blur(80px);
     display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    column-gap: 5px;
+    font-family: var(--f-barlow);
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.active-link::after {
+    content: '';
+    width: 100%;
+    height: 2.5px;
     background-color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+.link:not(.active-link):after {
+    content: '';
+    width: 100%;
+    height: 2.5px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 0;
+    transition: background-color 300ms;
+}
+
+.link:not(.active-link):hover::after {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.link-span {
+    letter-spacing: 0;
+    font-weight: 700;
+}
+
+/* MAIN HEADER */
+
+.main-header {
+    
 }
