@@ -1,6 +1,25 @@
 nav {
+    top: 50px;
+    position: fixed;
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.divider {
+    width: 400px;
+}
+
+.links {
+    width: 55%;
+    height: 100px;
+    display: flex;
+    background-color: white;
 }
